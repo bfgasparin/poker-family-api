@@ -1,0 +1,5 @@
+[mysqld]
+# At this moment (01/05/2018) pod mysql does not support caching_sha2_password plugin, used by default for mysql 8.
+# http://php.net/manual/en/ref.pdo-mysql.php
+default_authentication_plugin = mysql_native_password
+
