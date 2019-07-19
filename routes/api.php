@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('matches', 'MatchesController@index');
+Route::get('matches/{match}/resume', 'MatchesController@resume');
+Route::get('matches/{match}/pause', 'MatchesController@pause');
+
